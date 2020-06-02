@@ -3,6 +3,7 @@ const db = require("../models/index.js");
 
 const router = express.Router();
 
+// get last workout
 router.get("/workouts", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {
@@ -13,17 +14,17 @@ router.get("/workouts", (req, res) => {
     });
 });
 
-// router.get("/user", (req, res) => {
-//   db.Workout.find({})
-//     .then((dbUser) => {
-//       res.json(dbUser);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// });
+router.post("/workouts/:id", (req, res) => {
+  db.Workout.find({})
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 
-router.post("/exercise/:addexercise", ({ body }, res) => {
+router.put("/workouts/:_id", ({ body }, res) => {
   db.Workout.create(body)
     .then(({ _id }) =>
       db.Workout.findOneAndUpdate(
