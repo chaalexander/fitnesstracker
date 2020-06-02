@@ -3,7 +3,7 @@ const db = require("../models/index.js");
 
 const router = express.Router();
 
-router.get("/workout", (req, res) => {
+router.get("/workouts", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {
       res.json(dbWorkout);
@@ -13,34 +13,38 @@ router.get("/workout", (req, res) => {
     });
 });
 
-router.get("/user", (req, res) => {
-  db.Workout.find({})
-    .then((dbUser) => {
-      res.json(dbUser);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
-});
+// router.get("/user", (req, res) => {
+//   db.Workout.find({})
+//     .then((dbUser) => {
+//       res.json(dbUser);
+//     })
+//     .catch((err) => {
+//       res.json(err);
+//     });
+// });
 
-router.post("/submit", ({ body }, res) => {
-  db.Note.create(body)
+router.post("/exercise/:addexercise", ({ body }, res) => {
+  db.Workout.create(body)
     .then(({ _id }) =>
-      db.User.findOneAndUpdate({}, { $push: { notes: _id } }, { new: true })
+      db.Workout.findOneAndUpdate(
+        {},
+        { $push: { exercises: _id } },
+        { new: true }
+      )
     )
-    .then((dbUser) => {
-      res.json(dbUser);
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.json(err);
     });
 });
 
-router.get("/populateduser", (req, res) => {
-  db.User.find({})
-    .populate("notes")
-    .then((dbUser) => {
-      res.json(dbUser);
+router.get("/populated", (req, res) => {
+  db.Workout.find({})
+    .populate("workouts")
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.json(err);
