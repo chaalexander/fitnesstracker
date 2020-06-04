@@ -14,34 +14,17 @@ router.get("/workouts", (req, res) => {
     });
 });
 
-// router.post("/api/workouts", ({ body }, res) => {
-//   const newWorkout = new Workout
+router.post("/workouts", ({ body }, res) => {
+  db.Workout.create(body)
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 
-//   db.Workout.find({})
-//     .then((dbWorkout) => {
-//       res.json(dbWorkout);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// });
 
-// router.post("/workouts/", ({ body }, res) => {
-//   db.Workout.create(body)
-//     .then(({ _id }) =>
-//       db.Workout.findOneAndUpdate(
-//         {},
-//         { $push: { workouts: _id } },
-//         { new: true }
-//       )
-//     )
-//     .then((dbWorkout) => {
-//       res.json(dbWorkout);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// });
 
 // router.get("/populated", (req, res) => {
 //   db.Workout.find({})
@@ -53,4 +36,5 @@ router.get("/workouts", (req, res) => {
 //       res.json(err);
 //     });
 // });
+
 module.exports = router;
