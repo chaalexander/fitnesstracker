@@ -34,7 +34,7 @@ router.post("/workouts", ({ body }, res) => {
 router.put("/workouts/:id", ({ body }, res) => {
   db.Workout.findOneAndUpdate(
     { body },
-    { $push: { exercise: body } },
+    { $push: { exercise: { body } } },
     { new: true }
   )
 
@@ -56,15 +56,15 @@ router.get("/workouts/range", (req, res) => {
     });
 });
 
-// router.get("/populated", (req, res) => {
-//   db.Workout.find({})
-//     .populate("workouts")
-//     .then((dbWorkout) => {
-//       res.json(dbWorkout);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// });
+router.get("/populated", (req, res) => {
+  db.Workout.find({})
+    .populate("workouts")
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 
 module.exports = router;
