@@ -1,13 +1,10 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect(
-  "mongodb://workout:password1@ds229373.mlab.com:29373/heroku_pw1hf3jd",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-  }
-);
+mongoose.connect("mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+});
 
 let workoutSeed = [
   {

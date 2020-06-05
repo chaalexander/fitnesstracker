@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -17,13 +18,9 @@ app.use(express.static("public"));
 app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb://workout:password1@ds229373.mlab.com:29373/heroku_pw1hf3jd",
-  {
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+});
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
