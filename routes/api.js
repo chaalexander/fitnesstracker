@@ -1,6 +1,8 @@
+// importing node packages
 const express = require("express");
 const db = require("../models/index.js");
 
+// creating hte router const
 const router = express.Router();
 
 // get last workout
@@ -14,6 +16,7 @@ router.get("/workouts", (req, res) => {
     });
 });
 
+// creating new workout
 router.post("/workouts", ({ body }, res) => {
   db.Workout.create(body)
     .then((dbWorkout) => {
@@ -24,6 +27,7 @@ router.post("/workouts", ({ body }, res) => {
     });
 });
 
+// updating the exercise and adding them to the db
 router.put("/workouts/:id", ({ body, params }, res) => {
   db.Workout.findOneAndUpdate(
     { _id: params.id },
@@ -39,6 +43,7 @@ router.put("/workouts/:id", ({ body, params }, res) => {
     });
 });
 
+// sending the info to the dashboard
 router.get("/workouts/range", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {
