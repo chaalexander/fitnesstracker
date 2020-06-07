@@ -33,10 +33,12 @@
 <img src= "public/assets/images/screenshots/desktop-resistance.png">
 <img src= "public/assets/images/screenshots/desktop-dashboard.png">
 <h3>Mobile</h3>
+<div style= "display: flex; justify-content: space-around">
 <img width="180" height="270" src= "public/assets/images/screenshots/mobile-main.png">
 <img width="180" height="270" src= "public/assets/images/screenshots/mobile-cardio.png">
 <img width="180" height="270" src= "public/assets/images/screenshots/mobile-resistance.png">
 <img width="180" height="270" src= "public/assets/images/screenshots/mobile-dashboard.png">
+</div>
 <h2 id="test"> Test </h2>
 <img  src= "public/assets/images/gif/gif.gif">
 <h2 id="contributors"> Contributors </h2>
