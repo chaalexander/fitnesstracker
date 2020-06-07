@@ -33,12 +33,12 @@
 <img src= "public/assets/images/screenshots/desktop-resistance.png">
 <img src= "public/assets/images/screenshots/desktop-dashboard.png">
 <h3>Mobile</h3>
-<img width="130" height="200" src= "public/assets/images/screenshots/mobile-main.png">
-<img width="130" height="200" src= "public/assets/images/screenshots/mobile-cardio.png">
-<img width="130" height="200" src= "public/assets/images/screenshots/mobile-resistance.png">
-<img width="130" height="200" src= "public/assets/images/screenshots/mobile-dashboard.png">
+<img width="180" height="270" src= "public/assets/images/screenshots/mobile-main.png">
+<img width="180" height="270" src= "public/assets/images/screenshots/mobile-cardio.png">
+<img width="180" height="270" src= "public/assets/images/screenshots/mobile-resistance.png">
+<img width="180" height="270" src= "public/assets/images/screenshots/mobile-dashboard.png">
 <h2 id="test"> Test </h2>
-<img width="400" height="200" src= "public/assets/images/gif/gif.gif">
+<img  src= "public/assets/images/gif/gif.gif">
 <h2 id="contributors"> Contributors </h2>
 <p><a href= "https://github.com/chaalexander">@chaalexander</a></p> 
 <h2 id="contact"> Contact </h2>         
