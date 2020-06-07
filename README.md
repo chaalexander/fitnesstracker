@@ -17,21 +17,28 @@
 <h2 id="installation"> Installation </h2>
 <p>JSON packages included. Just run npm i</p>          
 <h2 id="tech"> Technology Stack </h2>          
-<p>Node, Express, Javascript, HTML, CSS, Boostrap, Mongodb, Mongoose </p>          
+<p>Node, Express, Javascript, HTML, CSS, Boostrap, Mongodb, Mongoose, Heroku, Mlab </p>          
 <h2 id="usage"> Usage </h2>
 <ol>
 <li>Click to start a workout.</li>
 <li>Select the type of workout and all the info.</li>
+<li>Add as many Exercise as you want.</li>
+<li>When you finish click complete and see the info from your workout.</li>
+<li>Click on the dashboard and see all your progress.</li>
 </ol>   
 <h2 id="screen"> ScreenShoots </h2>
 <h3>Desktop</h3>
-<!-- <img src= "">
-<img src= ""> -->
+<img src= "public/assets/images/screenshots/desktop-main.png">
+<img src= "public/assets/images/screenshots/desktop-cardio.png">
+<img src= "public/assets/images/screenshots/desktop-resistance.png">
+<img src= "public/assets/images/screenshots/desktop-dashboard.png">
 <h3>Mobile</h3>
-<!-- <img width="130" height="200" src= "">
-<img width="130" height="200" src= ""> -->
+<img width="130" height="200" src= "public/assets/images/screenshots/mobile-main.png">
+<img width="130" height="200" src= "public/assets/images/screenshots/mobile-cardio.png">
+<img width="130" height="200" src= "public/assets/images/screenshots/mobile-resistance.png">
+<img width="130" height="200" src= "public/assets/images/screenshots/mobile-dashboard.png">
 <h2 id="test"> Test </h2>
-<!-- <img src= ""> -->
+<img width="400" height="200" src= "public/assets/images/gif/gif.gif">
 <h2 id="contributors"> Contributors </h2>
 <p><a href= "https://github.com/chaalexander">@chaalexander</a></p> 
 <h2 id="contact"> Contact </h2>         

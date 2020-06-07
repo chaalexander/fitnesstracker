@@ -25,8 +25,10 @@ app.use(express.static("public"));
 app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
+// Port
 const PORT = process.env.PORT || 8000;
 
+// connection with database local and cloud
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
 });

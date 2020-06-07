@@ -1,6 +1,8 @@
+// requiring external packages
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// making the model to create the data base
 const WorkoutSchema = new Schema({
   day: { type: Date, default: new Date() },
   exercises: [
@@ -16,6 +18,8 @@ const WorkoutSchema = new Schema({
   ],
 });
 
+// converting the model to a mongoose model
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
+// exporting the function
 module.exports = Workout;
